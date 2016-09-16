@@ -4,7 +4,7 @@ var serviceBase = "http://ps-jha-tm-api.azurewebsites.net/";
 
 angular
     .module('hackathon', [
-        'ui.router', 'ui.bootstrap', 'ngResource', 'LocalStorageModule'
+        'ui.router', 'ui.bootstrap', 'ngResource', 'LocalStorageModule', 'angularAudioRecorder'
     ]);
 
 angular
@@ -15,7 +15,7 @@ angular
              $stateProvider
                 .state('login', {
                     url: '/login',
-                    templateUrl: "/app/login/views/login.html"
+                    templateUrl: "/hackaton/app/login/views/login.html"
                 });
             $urlRouterProvider.otherwise("/login");
         }

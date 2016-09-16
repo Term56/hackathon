@@ -8,6 +8,8 @@
     loginController.$inject = ['$scope'];
 
     function loginController($scope) {
-
+    	$scope.recordVoice = function () {
+    		
+    	}
     }
 }());
