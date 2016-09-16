@@ -1,9 +1,36 @@
 <div class="container" data-ng-controller="RegisterController">
-    <div class="panel">
-        <div class="panel-heading">
-            <h3 class="panel-title">This is the registration page</h3>
-        </div>
-        <form name="form" class="form-horizontal override container-fluid" novalidate>
-        </form>
+    <form name="form" class="form-horizontal override container-fluid" novalidate>
+	    <div class="panel">
+	        <div class="panel-body">
+	        	<div class="form-group">
+	        		<label for="firstName" class="required">First Name:</label>
+	                <input id="firstName" name="firstName" type="text" class="form-control" title="Enter First Name" alt="Enter First Name" placeholder="Enter First Name" maxlength="25" data-ng-model="registration.firstName" required>	
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="lastName" class="required">Last Name:</label>
+	                <input id="lastName" name="lastName" type="text" class="form-control" title="Enter First Name" alt="Enter Last Name" placeholder="Enter Last Name" maxlength="25" data-ng-model="registration.lastName" required>	
+	        	</div>
+	        	<div class="form-group">
+                    <label for="inputEmail" class="required">Email:</label>
+                    <input id="inputEmail" name="inputLoginId" type="text" class="form-control width-240" data-ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" placeholder="Enter Email Address" maxlength="25" data-ng-model="registration.email" required>
+                </div>
+	        	<div class="form-group">
+                        <label for="newPassword" class="required">New Password:</label>
+                        <input id="newPassword" name="newPassword" type="password" class="form-control width-240" title="New Password" alt="New Password" placeholder="Enter New Password" maxlength="25" data-ng-model="registration.password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword" class="required">Confirm Password:</label>
+                    <input id="confirmPassword" name="inputLoginId" type="password" class="form-control width-240" placeholder="Confirm New Password" maxlength="25" data-ng-model="registration.confirmPassword" required>
+                </div>
+                <div class="form-group margin-bottom-none" data-ng-if="registration.password !== null && registration.password !== undefined && registration.password.length > 0 && registration.confirmPassword !== null &&registration.confirmPassword !== undefined && registration.confirmPassword.length > 0 && registration.confirmPassword !== registration.password">
+                    <div class="label-margin">
+                        <i class="fa fa-exclamation-triangle danger-color"></i>&nbsp;&nbsp;&nbsp;<span class="danger-color">Passwords Do Not Match.</span>
+                    </div>
+                </div>
+	        </div>
+	        <div class="panel-footer">
+	            <button type="submit" class="btn btn-success" data-ng-click="register()" data-ng-disabled="form.$invalid">Register</button>
+	        </div>
+        </form>	
     </div>
 </div>
