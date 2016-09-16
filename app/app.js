@@ -16,6 +16,18 @@ angular
                 .state('login', {
                     url: '/login',
                     templateUrl: "/hackaton/app/login/views/login.html"
+                })
+                .state('dashboard', {
+                    url: '/dashboard',
+                    templateUrl: "/hackaton/app/dashboard/views/dashboard.html"
+                })
+                .state('profile', {
+                    url: '/profile',
+                    templateUrl: "/hackaton/app/profile/views/profile.html"
+                })
+                .state('register', {
+                    url: '/register',
+                    templateUrl: "/hackaton/app/register/views/register.html"
                 });
             $urlRouterProvider.otherwise("/login");
         }
