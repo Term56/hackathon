@@ -1,0 +1,23 @@
+<div id="login-view" class="container" data-ng-controller="LoginController">
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Login</h3>
+        </div>
+        <form name="form" class="form-horizontal override container-fluid" novalidate>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="inputCompanyId" class="required">Company ID:</label>
+                    <input id="inputCompanyId" name="companyId" type="text" class="form-control" title="Enter Company ID" alt="Company ID" placeholder="Enter Company ID" maxlength="25" data-ng-model="loginData.companyId" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputID" class="required">Login ID:</label>
+                    <input id="inputID" name="inputID" type="text" class="form-control" title="Enter Login ID" alt="Login ID" placeholder="Login ID" maxlength="25" data-ng-model="loginData.loginId" required>
+                </div>
+                <div class="form-group margin-bottom-none">
+                    <label for="inputPassword" class="required">Password:</label>
+                    <input id="inputPassword" name="inputPassword" type="password" class="form-control" title="Enter Password" alt="Enter Password" placeholder="Password" maxlength="25" data-ng-model="loginData.password" required>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

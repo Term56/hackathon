@@ -1,0 +1,19 @@
+{
+  "test": "blue",
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "environment configuration",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "author": "A2G",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  }
+}
